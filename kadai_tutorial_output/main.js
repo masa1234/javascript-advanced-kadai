@@ -114,12 +114,12 @@ const gameOver = (id) => {
   wrapfield.textContent = "タイムアップ!";
   setTimeout(() => {
     const result = confirm(rankCheck(score));
-  }, 10000);
 
-  // OKボタンをクリックされたらリロードする
-  if (result == true) {
-    window.location.reload();
-  }
+    // OKボタンをクリックされたらリロードする
+    if (result == true) {
+      window.location.reload();
+    }
+  }, 10);
 };
 
 // カウントダウンタイマー
