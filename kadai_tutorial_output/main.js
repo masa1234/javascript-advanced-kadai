@@ -8,6 +8,7 @@ const untypedfield = document.getElementById("untyped");
 const typedfield = document.getElementById("typed");
 const scorefield = document.getElementById("score");
 const wrap = document.getElementById("wrap");
+const wrapfield = document.getElementById("wrap");
 const start = document.getElementById("start");
 const count = document.getElementById("count");
 
@@ -110,8 +111,10 @@ const rankCheck = (score) => {
 // ゲームを終了
 const gameOver = (id) => {
   clearInterval(id);
-
-  const result = confirm(rankCheck(score));
+  wrapfield.textContent = "タイムアップ!";
+  setTimeout(() => {
+    const result = confirm(rankCheck(score));
+  }, 10000);
 
   // OKボタンをクリックされたらリロードする
   if (result == true) {
