@@ -6,6 +6,7 @@ let score = 0;
 // 必要なHTML要素の取得
 const untypedfield = document.getElementById("untyped");
 const typedfield = document.getElementById("typed");
+const scorefield = document.getElementById("score");
 const wrap = document.getElementById("wrap");
 const start = document.getElementById("start");
 const count = document.getElementById("count");
@@ -78,6 +79,7 @@ const keyPress = (e) => {
   untyped = untyped.substring(1);
   typedfield.textContent = typed;
   untypedfield.textContent = untyped;
+  scorefield.textContent = score;
 
   // テキストがなくなったら新しいテキストを表示
   if (untyped === "") {
